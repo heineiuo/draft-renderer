@@ -1,0 +1,9 @@
+{
+  "name": "@youkuohao/draft-renderer",
+  "version": "1.0.0",
+  "main": "dom.js",
+  "license": "MIT",
+  "dependencies": {
+    "styled-components": "*"
+  }
+}
