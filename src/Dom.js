@@ -24,7 +24,6 @@ export class DraftView extends React.Component {
     const { entityMap, blocks } = props.rawContentState
     this.entityMap = entityMap
     this.blocks = blocks
-    this.customBlockRender = props.customBlockRender
   }
 
   getEntity = (key) => {
@@ -88,7 +87,7 @@ export class DraftView extends React.Component {
       }
     }
 
-    const CustomBlock = this.renderCustomBlock
+    const CustomBlock = this.props.customBlockRender
 
     return (
       <div style={containerStyle}>
@@ -96,7 +95,7 @@ export class DraftView extends React.Component {
           const type = block.getType()
           return (
             <div key={block.key}>
-              {type === 'atomic' ? <CustomBlock block={this} />
+              {type === 'atomic' ? <CustomBlock block={block} />
                 : <p>{block.getText()}</p>
               }
             </div>
