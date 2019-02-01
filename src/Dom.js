@@ -95,7 +95,7 @@ export class DraftView extends React.Component {
           const type = block.getType()
           return (
             <div key={block.key}>
-              {type === 'atomic' ? <CustomBlock block={block} />
+              {type.indexOf('atomic') === 0 ? <CustomBlock block={block} />
                 : <p>{block.getText()}</p>
               }
             </div>

@@ -49,5 +49,9 @@ export class Block {
     return this.rawBlock.text
   }
 
+  getData = () => {
+    return this.rawBlock.data
+  }
+  
   getCharacterList = () => { }
 }
