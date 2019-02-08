@@ -1,0 +1,13 @@
+image: docker.youkuohao.com/ci-agent-node:1.1.0
+
+jobs:
+
+  build-js:
+    condition:
+      - '2 > 1'
+    environment:
+      - NODE_ENV: production
+    steps:
+      - run: yarn install --production=false
+      - run: yarn build
+      - run: cp -r dist/* /dist
