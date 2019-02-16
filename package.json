@@ -1,9 +1,12 @@
 {
   "name": "@youkuohao/draft-renderer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/Dom.js",
   "module": "dist/Native.js",
   "license": "MIT",
+  "files": [
+    "dist"
+  ],
   "standard": {
     "parser": "babel-eslint"
   },
